@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="rps.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <style>
+        .mainbody{
+    border:8px solid rgb(6,78,64);
+    background-color:darksalmon;
+    height:800px;
+    width:900px;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    margin:0 auto;
+}
+#rock, #paper, #scissors{
+    height:50px;
+    width:200px;
+    background-color:aquamarine;
+    border:solid black 3px;
+    font-size: 20px;
+    box-shadow: 5px 5px 10px;
+    cursor:pointer;
+    font-family: 'Bebas Neue', cursive;
+    
+}
+.buttoncontainer{
+    display:flex;
+    width:80%;
+    align-items:center;
+    justify-content:space-between;
+    margin-top:20px;
+}
+#hand{
+    height:500px;
+    display:block;
+    margin-top:20px;
+    border:5px solid rgb(6,78,64);
+}
+.scoresbox{
+    display:flex;
+    width:800px;
+    margin:0 auto;
+    margin-top:50px;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 35px;
+    
+    
+}
+.player{
+    display:flex;
+    margin:10px;
+    width:100%;
+    font-family: 'Bebas Neue', cursive;
+    justify-content: space-evenly;
+}
+
+#you, #computer{
+    height:80px;
+    width:80px;
+    border-radius:50%;
+    font-size: 20px;
+    border:3px solid black;
+    background-color:rgb(171, 241, 206);
+}
+label{
+    padding-top:10px;
+}
+    </style>
+</head>
+<body>
+    <div class="alert">
+        <form name="form" method="post" type="innerText">
+        Are you ready to play<input  type="text" id="player"> ???
+        <button type="button" onclick="playerName()">Enter</button>
+        </form>
+    </div>
+    <div class="mainbody">
+        <div class="scoresbox">
+            <div class="player">
+                <label id="newname">Your Score</label>
+                <button id="you" type="button">0</button>
+            </div>
+            <div class="player">
+                <button id="computer" type="button">0</button>
+                <label>Computer's Score</label>
+            </div>
+        </div>
+        <img id="hand" src="rock.png" alt="rock">
+        <div class="buttoncontainer">
+            <button id="rock" onclick=rockPaper1() type="button">ROCK</button>
+            <button id="paper" onclick=rockPaper2() type="button" >PAPER</button>
+            <button id="scissors" onclick=rockPaper3() type="button" >SCISSORS</button>
+        </div>
+    </div>
+    <script>
+        
+function rockPaper1(){
+    var img=document.querySelector("#hand");
+    var x=Math.floor(Math.random()*3);
+    var count=document.querySelector("#you");
+    var computercount=document.querySelector("#computer");
+    if(x===0){
+        img.src="paper.png";
+        computercount.innerText++;
+    }
+    else if(x===1){
+        img.src="scissors.png";
+        count.innerText++;
+    }
+    else{
+        img.src="rock.png";
+    }
+}
+
+function rockPaper2(){
+    var img=document.querySelector("#hand");
+    var x=Math.floor(Math.random()*3);
+    var count=document.querySelector("#you");
+    var computercount=document.querySelector("#computer");
+    if(x===0){
+        img.src="paper.png";
+    }
+    else if(x===1){
+        img.src="scissors.png";
+        computercount.innerText++;
+    }
+    else{
+        img.src="rock.png";
+        count.innerText++;
+    }
+}
+function rockPaper3(){
+    var img=document.querySelector("#hand");
+    var x=Math.floor(Math.random()*3);
+    var count=document.querySelector("#you");
+    var computercount=document.querySelector("#computer");
+    if(x===0){
+        img.src="paper.png";
+        count.innerText++;
+    }
+    else if(x===1){
+        img.src="scissors.png";
+    }
+    else{
+        img.src="rock.png";
+        computercount.innerText++;
+    }
+}
+var string=document.getElementById("#player").placeholder;
+
+function playerName(){
+    var cookie=document.querySelector(".alert");
+    cookie.style.display='none';s
+}
+
+    </script>
+</body>
+</html>

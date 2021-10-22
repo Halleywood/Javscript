@@ -1,0 +1,80 @@
+.mainbody{
+    border:8px solid rgb(6,78,64);
+    background-color:darksalmon;
+    height:800px;
+    width:900px;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    margin:0 auto;
+}
+#rock, #paper, #scissors{
+    height:50px;
+    width:200px;
+    background-color:aquamarine;
+    border:solid black 3px;
+    font-size: 20px;
+    box-shadow: 5px 5px 10px;
+    cursor:pointer;
+    font-family: 'Bebas Neue', cursive;
+}
+.buttoncontainer{
+    display:flex;
+    width:80%;
+    align-items:center;
+    justify-content:space-between;
+    margin-top:20px;
+}
+#hand{
+    height:500px;
+    display:block;
+    margin-top:20px;
+    border:5px solid rgb(6,78,64);
+}
+.scoresbox{
+    display:flex;
+    width:800px;
+    margin:0 auto;
+    margin-top:50px;
+    font-family: 'Bebas Neue', cursive;
+    font-size: 35px;
+    
+    
+}
+.player{
+    display:flex;
+    margin:10px;
+    width:100%;
+    font-family: 'Bebas Neue', cursive;
+    justify-content: space-evenly;
+}
+
+#you, #computer{
+    height:80px;
+    width:80px;
+    border-radius:50%;
+    font-size: 20px;
+    border:3px solid black;
+    background-color:rgb(171, 241, 206);
+}
+label{
+    padding-top:10px;
+}
+
+.alert{
+    width:500px;
+    height:150px;
+    font-size:40px;
+    font-family: 'Bebas Neue', cursive;
+    text-align: center;
+    border: 8px solid black;
+    background-color:white;
+    position:fixed;
+    top:100px;
+    right:420px;
+}
+.playerName{
+    border:2px solid black;
+    font-size:20px;
+    font-family: 'Bebas Neue', cursive;
+}
