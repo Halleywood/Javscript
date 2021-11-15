@@ -24,3 +24,5 @@ function recursiveSigma(num, i=0){
 console.log(recursiveSigma(num1));
 console.log(recursiveSigma(num2));
 console.log(recursiveSigma(num3));
+
+
